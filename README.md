@@ -12,6 +12,8 @@ A sophisticated AI-powered software engineering agent that automates code implem
 
 ![Main Agent](./static/main_agent.png)
 
+[end to end showcase](https://youtu.be/vJNqAgLzOSg)
+
 ## 🚀 Features
 
 - **Intelligent Code Planning**: AI architect analyzes requirements and creates detailed implementation plans
@@ -214,11 +216,16 @@ cd swe-agent-langgraph
 uv sync
 
 # Create environment file
-cp .env.example .env
-# Add your Anthropic API key to .env
+cp .env.example .env.local
+# Add your Anthropic API key and langsmith to .env
 ```
 
-3. **Run the agent**
+3. **Clone a repo to ./workspace_repo**
+```bash
+git clone https://github.com/browser-use/browser-use ./workspace_repo
+```
+
+4. **Run the agent**
 ```bash
 # Activate environment
 source .venv/bin/activate
@@ -231,6 +238,7 @@ langgraph dev
 4. **Example usage**
 Input:
 ![Input](./static/input.png)
+>Enable the browser-use agent to accept multi-modal instructions by supporting image inputs (e.g., step1.png, step2.png) alongside text. This will improve the agent’s ability to interpret and follow ambiguous or unclear textual commands
 
 Output: (browsing the workspace repo git)
 ![Output](./static/output.png)
@@ -407,7 +415,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with [LangGraph](https://langchain-ai.github.io/langgraph/) for reliable agent workflows
 - Powered by [Anthropic Claude](https://www.anthropic.com/) for intelligent reasoning
 - Uses [tree-sitter](https://tree-sitter.github.io/) for robust code parsing
-- Inspired by advances in AI-powered software development
+- See our [deepwiki](https://deepwiki.com/langtalks/swe-agent/1-overview)
 
 ## 📞 Support & Community
 
