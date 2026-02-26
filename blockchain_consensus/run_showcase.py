@@ -23,7 +23,6 @@ Examples:
 """
 
 import argparse
-import sys
 
 from blockchain_consensus.simulation.scenarios import (
     run_all_scenarios,
